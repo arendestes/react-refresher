@@ -1,6 +1,9 @@
 import React from 'react';
+
+import NewGoal from './components/NewGoal/NewGoal'
+import GoalList from './components/GoalList/GoalList'
+
 import './App.css';
-import GoalList from './components/GoalList'
 
 const App = () => {
   const courseGoals = [
@@ -11,15 +14,11 @@ const App = () => {
   ]
 
   return <div className="course-goals">
-    <h2>Course Goals</h2>                          
+    <h2>Course Goals</h2>
+    <NewGoal />                          
     <GoalList goals={courseGoals} />                            
   </div>
 };
 
-// class App extends React.Component {
-//   render(){
-//     return <h1 title="This works.">A React App with a class based component!</h1>;
-//   }
-// }          This is a class based component
 
 export default App;
