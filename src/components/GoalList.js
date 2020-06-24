@@ -2,13 +2,11 @@ import React from 'react';
 
 import './GoalList.css'
 
-const GoalList = ()=>{
+const GoalList = props =>{
+    console.log(props.goals);
     return (
     <ul className="goal-list">
-    <li>complete course</li>
-    <li>good understanding of couse material</li>
-    <li>help people in Q&amp;A</li>
-    <li>pat self on back</li>
+   
     </ul>
   )
 }

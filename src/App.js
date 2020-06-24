@@ -3,15 +3,16 @@ import './App.css';
 import GoalList from './components/GoalList'
 
 const App = () => {
-  // return <h1 title="This works.">A React App!</h1>;
+  const courseGoals = [
+    {id: 'cg1', text: 'complete course'},
+    {id: 'cg2', text: 'good understanding of couse material'},
+    {id: 'cg3', text: 'help people in Q&A'},
+    {id: 'cg4', text: 'pat self on back'}
+  ]
+
   return <div className="course-goals">
-    <h2>Course Goals</h2>
-    {/* <ul className="goal-list">
-      <li>complete course</li>
-      <li>good understanding of couse material</li>
-      <li>help people in Q&amp;A</li>
-    {/* </ul> */}                           {/* if JSX was not used as seperate component */}
-    <GoalList />                            {/*  GoalList imported as component */}
+    <h2>Course Goals</h2>                          
+    <GoalList goals={courseGoals} />                            
   </div>
 };
 
