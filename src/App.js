@@ -13,9 +13,14 @@ const App = () => {
     {id: 'cg4', text: 'pat self on back'}
   ]
 
+  const addGoalHandler = newGoal =>{
+    courseGoals.push(newGoal);
+    console.log(courseGoals);
+  }
+
   return <div className="course-goals">
     <h2>Course Goals</h2>
-    <NewGoal />                          
+    <NewGoal onAddGoal={addGoalHandler} />                          
     <GoalList goals={courseGoals} />                            
   </div>
 };
